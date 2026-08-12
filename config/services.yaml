@@ -1,0 +1,5 @@
+services:
+    _defaults:
+        autoconfigure: true
+
+    Asyntai\ContaoChatbotBundle\EventListener\AddWidgetListener: ~
