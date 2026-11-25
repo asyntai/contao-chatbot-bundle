@@ -1,5 +1,16 @@
 services:
     _defaults:
+        autowire: true
         autoconfigure: true
 
     Asyntai\ContaoChatbotBundle\EventListener\AddWidgetListener: ~
+
+    Asyntai\ContaoChatbotBundle\Feed\PageReader: ~
+
+    Asyntai\ContaoChatbotBundle\Controller\FeedController:
+        public: true
+        tags: ['controller.service_arguments']
+
+    Asyntai\ContaoChatbotBundle\Controller\ConnectController:
+        public: true
+        tags: ['controller.service_arguments']

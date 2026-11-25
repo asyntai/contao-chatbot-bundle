@@ -6,7 +6,7 @@ $GLOBALS['TL_LANG']['tl_settings']['asyntai_legend'] = 'Asyntai AI chatbot';
 
 $GLOBALS['TL_LANG']['tl_settings']['asyntaiWidgetId'] = [
     'Asyntai widget ID',
-    'Paste the snippet from your Asyntai dashboard, or only the widget ID. Leave the field empty to switch the chat off. You find it at asyntai.com under Setup & Integration.',
+    'The easiest way to connect is System → Asyntai AI Chatbot. You can also paste the snippet from your Asyntai dashboard here, or only the widget ID. Leave the field empty to switch the chat off. You find it at asyntai.com under Setup & Integration.',
 ];
 
 $GLOBALS['TL_LANG']['tl_settings']['asyntaiScriptUrl'] = [

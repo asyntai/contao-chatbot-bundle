@@ -6,7 +6,7 @@ $GLOBALS['TL_LANG']['tl_settings']['asyntai_legend'] = 'Asyntai KI-Chatbot';
 
 $GLOBALS['TL_LANG']['tl_settings']['asyntaiWidgetId'] = [
     'Asyntai Widget-ID',
-    'Fügen Sie das Snippet aus Ihrem Asyntai-Dashboard ein oder nur die Widget-ID. Lassen Sie das Feld leer, um den Chat auszuschalten. Sie finden die ID auf asyntai.com unter „Setup & Integration“.',
+    'Am einfachsten verbinden Sie die Website unter System → Asyntai KI-Chatbot. Sie können hier auch das Snippet aus Ihrem Asyntai-Dashboard einfügen oder nur die Widget-ID. Lassen Sie das Feld leer, um den Chat auszuschalten. Sie finden die ID auf asyntai.com unter „Setup & Integration“.',
 ];
 
 $GLOBALS['TL_LANG']['tl_settings']['asyntaiScriptUrl'] = [

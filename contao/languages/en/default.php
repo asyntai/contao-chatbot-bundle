@@ -1,0 +1,35 @@
+<?php
+
+declare(strict_types=1);
+
+$GLOBALS['TL_LANG']['ASYNTAI'] = [
+    'adminOnly' => 'Only administrators can connect the website to Asyntai.',
+    'connectTitle' => 'Create an Asyntai account or sign in to switch on the chatbot',
+    'shareBefore' => 'Let the chatbot read my published pages directly, so its answers stay up to date.',
+    'shareBeforeNote' => 'Only pages that any visitor can already see. Nothing on your website is changed.',
+    'getStarted' => 'Get started',
+    'popupNote' => 'A window opens where you sign in or create a free account.',
+    'connected' => 'Connected',
+    'connectedAs' => 'Connected as %s',
+    'connectedNote' => 'The chatbot is on every page of your website. Set it up and read your chat logs in the Asyntai dashboard.',
+    'dashboard' => 'Open your Asyntai dashboard',
+    'disconnect' => 'Disconnect this website',
+    'pagesTitle' => 'Your pages',
+    'shareLabel' => 'Share my published pages with the chatbot',
+    'shareNote' => 'Asyntai reads the pages that any visitor can already see, and checks them again for changes. Nothing on your website is changed.',
+    'jsPreparing' => 'Preparing...',
+    'jsWaiting' => 'Waiting for you to finish in the Asyntai window...',
+    'jsSaving' => 'Connected. Saving...',
+    'jsBlocked' => 'Your browser blocked the pop-up. Allow pop-ups and try again.',
+    'jsFailed' => 'Could not connect. Please try again.',
+    'jsTimeout' => 'Timed out waiting for the Asyntai window. Please try again.',
+    'jsSignedOut' => 'Contao signed you out. Please log in again, then try once more.',
+    'jsConfirm' => 'Disconnect this website from Asyntai? The chatbot is removed from your website.',
+    'jsShareOn' => 'Page sharing is on.',
+    'jsShareOff' => 'Page sharing is off. Asyntai can no longer read your pages.',
+    'jsReconnect' => 'Sign in to Asyntai once more to share your pages.',
+    'jsNotYet' => 'Asyntai has not read your pages yet.',
+    'jsReading' => 'Reading your pages...',
+    'jsLastFailed' => 'The last read failed: %s',
+    'jsShared' => 'Pages shared: %s items. Asyntai checks them again for changes.',
+];

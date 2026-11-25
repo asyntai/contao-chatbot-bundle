@@ -22,16 +22,26 @@ composer require asyntai/contao-chatbot-bundle
 
 ## Setup
 
-1. Create a free account at [asyntai.com](https://asyntai.com) and add your website.
-2. Open **Setup & Integration** in the Asyntai dashboard and copy the snippet.
-3. In the Contao back end, go to **System → Settings**.
-4. Paste the snippet into **Asyntai widget ID** and save.
+1. In the Contao back end, go to **System → Asyntai AI Chatbot**.
+2. Click **Get started** and sign in, or create a free Asyntai account.
 
-The chat bubble now appears on the front end. To switch the chat off, clear the
-field.
+The chat bubble now appears on the front end. You can change the assistant, its
+colours, its greeting and its knowledge at any time on asyntai.com. You do not
+need to change anything in Contao for that.
 
-You can change the assistant, its colours, its greeting and its knowledge at any
-time on asyntai.com. You do not need to change anything in Contao for that.
+You can also connect by hand: copy the snippet from **Setup & Integration** in
+the Asyntai dashboard, and paste it into **Asyntai widget ID** under
+**System → Settings**.
+
+## Reads your pages directly
+
+With **Share my published pages with the chatbot** switched on, Asyntai reads
+your pages straight from your website, so the chatbot's answers stay up to date.
+It reads the same pages as your XML sitemap, including news, events and FAQ
+entries. Drafts, members-only pages and pages marked "noindex" are never sent.
+
+Every read is signed with a key that only your website and Asyntai know. You can
+switch sharing off at any time on the same page.
 
 ## How it works
 

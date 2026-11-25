@@ -1,0 +1,35 @@
+<?php
+
+declare(strict_types=1);
+
+$GLOBALS['TL_LANG']['ASYNTAI'] = [
+    'adminOnly' => 'Nur Administratoren können die Website mit Asyntai verbinden.',
+    'connectTitle' => 'Erstellen Sie ein Asyntai-Konto oder melden Sie sich an, um den Chatbot einzuschalten',
+    'shareBefore' => 'Der Chatbot darf meine veröffentlichten Seiten direkt lesen, damit seine Antworten aktuell bleiben.',
+    'shareBeforeNote' => 'Nur Seiten, die jeder Besucher bereits sehen kann. An Ihrer Website wird nichts geändert.',
+    'getStarted' => 'Jetzt starten',
+    'popupNote' => 'Es öffnet sich ein Fenster, in dem Sie sich anmelden oder ein kostenloses Konto erstellen.',
+    'connected' => 'Verbunden',
+    'connectedAs' => 'Verbunden als %s',
+    'connectedNote' => 'Der Chatbot ist auf jeder Seite Ihrer Website. Richten Sie ihn im Asyntai-Dashboard ein und lesen Sie dort Ihre Chat-Protokolle.',
+    'dashboard' => 'Asyntai-Dashboard öffnen',
+    'disconnect' => 'Diese Website trennen',
+    'pagesTitle' => 'Ihre Seiten',
+    'shareLabel' => 'Meine veröffentlichten Seiten mit dem Chatbot teilen',
+    'shareNote' => 'Asyntai liest die Seiten, die jeder Besucher bereits sehen kann, und prüft sie regelmäßig auf Änderungen. An Ihrer Website wird nichts geändert.',
+    'jsPreparing' => 'Wird vorbereitet...',
+    'jsWaiting' => 'Warten, bis Sie im Asyntai-Fenster fertig sind...',
+    'jsSaving' => 'Verbunden. Wird gespeichert...',
+    'jsBlocked' => 'Ihr Browser hat das Pop-up blockiert. Erlauben Sie Pop-ups und versuchen Sie es erneut.',
+    'jsFailed' => 'Die Verbindung ist fehlgeschlagen. Bitte versuchen Sie es erneut.',
+    'jsTimeout' => 'Zeitüberschreitung beim Warten auf das Asyntai-Fenster. Bitte versuchen Sie es erneut.',
+    'jsSignedOut' => 'Contao hat Sie abgemeldet. Bitte melden Sie sich erneut an und versuchen Sie es noch einmal.',
+    'jsConfirm' => 'Diese Website von Asyntai trennen? Der Chatbot wird von Ihrer Website entfernt.',
+    'jsShareOn' => 'Das Teilen der Seiten ist eingeschaltet.',
+    'jsShareOff' => 'Das Teilen der Seiten ist ausgeschaltet. Asyntai kann Ihre Seiten nicht mehr lesen.',
+    'jsReconnect' => 'Melden Sie sich noch einmal bei Asyntai an, um Ihre Seiten zu teilen.',
+    'jsNotYet' => 'Asyntai hat Ihre Seiten noch nicht gelesen.',
+    'jsReading' => 'Ihre Seiten werden gelesen...',
+    'jsLastFailed' => 'Das letzte Lesen ist fehlgeschlagen: %s',
+    'jsShared' => 'Geteilte Seiten: %s Einträge. Asyntai prüft sie regelmäßig auf Änderungen.',
+];
