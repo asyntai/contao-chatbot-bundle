@@ -6,8 +6,8 @@ around the clock, using your own pages, documents and product information.
 
 ## Requirements
 
-- Contao 5.3 or later
-- PHP 8.2 or later
+- Contao 5.3 or later, including Contao 6
+- PHP 8.2 or later (Contao 6 needs PHP 8.4)
 - A free Asyntai account
 
 ## Installation

@@ -1,8 +1,5 @@
-<?php
-$l = $this->lang;
-$t = static fn (string $key): string => \Contao\StringUtil::specialchars($l[$key] ?? $key);
-$connected = '' !== $this->widgetId;
-?>
+{% set l = lang|default({}) %}
+{% set connected = widgetId|default('') is not same as('') %}
 <style>
     .asyntai-wrap{max-width:820px;padding:18px 15px}
     .asyntai-panel{background:#fff;border:1px solid #e0e0e0;padding:20px 22px;margin:0 0 16px;color:#222}
@@ -24,42 +21,42 @@ $connected = '' !== $this->widgetId;
 </style>
 
 <div class="asyntai-wrap" id="asyntai-connect-root"
-     data-action-url="<?= \Contao\StringUtil::specialchars($this->actionUrl) ?>"
-     data-token="<?= \Contao\StringUtil::specialchars($this->requestToken) ?>">
+     data-action-url="{{ actionUrl }}"
+     data-token="{{ requestToken }}">
 
     <div id="asyntai-alert" class="asyntai-alert" style="display:none"></div>
 
-    <?php if (!$this->isAdmin): ?>
-        <div class="asyntai-panel"><p><?= $t('adminOnly') ?></p></div>
-    <?php elseif (!$connected): ?>
+    {% if not isAdmin %}
+        <div class="asyntai-panel"><p>{{ l.adminOnly|default('') }}</p></div>
+    {% elseif not connected %}
         <div class="asyntai-panel">
-            <h2><?= $t('connectTitle') ?></h2>
+            <h2>{{ l.connectTitle|default('') }}</h2>
             <label class="asyntai-check">
                 <input type="checkbox" id="asyntai-share-before" checked>
-                <span><?= $t('shareBefore') ?><small><?= $t('shareBeforeNote') ?></small></span>
+                <span>{{ l.shareBefore|default('') }}<small>{{ l.shareBeforeNote|default('') }}</small></span>
             </label>
-            <p><button type="button" id="asyntai-connect" class="asyntai-btn"><?= $t('getStarted') ?></button></p>
-            <p class="asyntai-fine"><?= $t('popupNote') ?></p>
+            <p><button type="button" id="asyntai-connect" class="asyntai-btn">{{ l.getStarted|default('') }}</button></p>
+            <p class="asyntai-fine">{{ l.popupNote|default('') }}</p>
         </div>
-    <?php else: ?>
+    {% else %}
         <div class="asyntai-panel">
-            <p class="asyntai-state"><span class="asyntai-dot"></span><?= '' !== $this->accountEmail ? sprintf($t('connectedAs'), \Contao\StringUtil::specialchars($this->accountEmail)) : $t('connected') ?></p>
-            <p><?= $t('connectedNote') ?></p>
+            <p class="asyntai-state"><span class="asyntai-dot"></span>{{ accountEmail|default('') is not same as('') ? l.connectedAs|default('%s')|format(accountEmail) : l.connected|default('') }}</p>
+            <p>{{ l.connectedNote|default('') }}</p>
             <p class="asyntai-links">
-                <a href="https://asyntai.com/dashboard" target="_blank" rel="noopener"><?= $t('dashboard') ?></a>
-                <a href="#" id="asyntai-disconnect" class="asyntai-danger"><?= $t('disconnect') ?></a>
+                <a href="https://asyntai.com/dashboard" target="_blank" rel="noopener">{{ l.dashboard|default('') }}</a>
+                <a href="#" id="asyntai-disconnect" class="asyntai-danger">{{ l.disconnect|default('') }}</a>
             </p>
         </div>
 
         <div class="asyntai-panel">
-            <h3><?= $t('pagesTitle') ?></h3>
+            <h3>{{ l.pagesTitle|default('') }}</h3>
             <label class="asyntai-check">
-                <input type="checkbox" id="asyntai-share"<?= $this->sharing ? ' checked' : '' ?>>
-                <span><strong><?= $t('shareLabel') ?></strong><small><?= $t('shareNote') ?></small></span>
+                <input type="checkbox" id="asyntai-share"{{ sharing ? ' checked' : '' }}>
+                <span><strong>{{ l.shareLabel|default('') }}</strong><small>{{ l.shareNote|default('') }}</small></span>
             </label>
             <p id="asyntai-share-status"></p>
         </div>
-    <?php endif; ?>
+    {% endif %}
 </div>
 
 <script>
@@ -68,23 +65,7 @@ $connected = '' !== $this->widgetId;
     if (!root || root.getAttribute('data-ready') === '1') { return; }
     root.setAttribute('data-ready', '1');
 
-    var strings = <?= json_encode([
-        'preparing' => $l['jsPreparing'] ?? '',
-        'waiting' => $l['jsWaiting'] ?? '',
-        'saving' => $l['jsSaving'] ?? '',
-        'blocked' => $l['jsBlocked'] ?? '',
-        'failed' => $l['jsFailed'] ?? '',
-        'timeout' => $l['jsTimeout'] ?? '',
-        'signedOut' => $l['jsSignedOut'] ?? '',
-        'confirm' => $l['jsConfirm'] ?? '',
-        'shareOn' => $l['jsShareOn'] ?? '',
-        'shareOff' => $l['jsShareOff'] ?? '',
-        'reconnect' => $l['jsReconnect'] ?? '',
-        'notYet' => $l['jsNotYet'] ?? '',
-        'reading' => $l['jsReading'] ?? '',
-        'lastFailed' => $l['jsLastFailed'] ?? '',
-        'shared' => $l['jsShared'] ?? '',
-    ], JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_UNESCAPED_UNICODE) ?>;
+    var strings = {{ jsStrings|raw }};
     var actionUrl = root.getAttribute('data-action-url');
     var requestToken = root.getAttribute('data-token');
     var popup = null;

@@ -33,6 +33,18 @@ class ConnectModule extends BackendModule
         // A real action name: the route only accepts known actions. The page
         // script swaps the last path segment for the action it calls.
         $this->Template->actionUrl = $container->get('router')->generate('asyntai_chatbot_connect', ['action' => 'status']);
-        $this->Template->lang = $GLOBALS['TL_LANG']['ASYNTAI'] ?? [];
+        $lang = $GLOBALS['TL_LANG']['ASYNTAI'] ?? [];
+        $this->Template->lang = $lang;
+
+        // The page script's texts, already safe to print inside a script tag.
+        $js = [];
+
+        foreach ($lang as $key => $text) {
+            if (str_starts_with((string) $key, 'js')) {
+                $js[lcfirst(substr((string) $key, 2))] = (string) $text;
+            }
+        }
+
+        $this->Template->jsStrings = json_encode($js, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_UNESCAPED_UNICODE);
     }
 }
